@@ -1,0 +1,86 @@
+
+# Fase A: Visión de la Arquitectura (TOGAF)
+## Proyecto: Modelo de IA para Enrutamiento Inteligente de PQRS
+**Empresa de Referencia:** TelcoLatam (Empresa de Telecomunicaciones)
+
+Este documento detalla el desarrollo de la Fase A: Visión de la Arquitectura del marco de trabajo TOGAF para el proyecto de implementación de un modelo de Inteligencia Artificial (IA) enfocado en el reconocimiento y redirección automática de Peticiones, Quejas, Reclamos y Sugerencias (PQRS). 
+
+El objetivo de la Fase A es desarrollar una visión aspiracional de alto nivel de las capacidades y el valor comercial que se entregará como resultado de la Arquitectura Empresarial propuesta. Asimismo, busca obtener la aprobación para una Declaración de Trabajo de Arquitectura que define un programa de trabajos para desarrollar y desplegar la arquitectura.
+
+---
+
+### 1. Establecer el Proyecto de Arquitectura
+La arquitectura empresarial es una capacidad de negocio, por lo que este ciclo del ADM (Architecture Development Method) se manejará como un proyecto formal utilizando el marco de gestión de proyectos de TelcoLatam. 
+*   **Nombre del Proyecto:** IA-PQRS Smart Routing.
+*   **Alineación corporativa:** Este proyecto apoyará el marco de gestión estratégica de Servicio al Cliente, buscando el respaldo de la gerencia corporativa y el compromiso de la gerencia de línea.
+
+### 2. Identificar las Partes Interesadas, las Preocupaciones y los Requisitos del Negocio
+El compromiso de las partes interesadas en esta etapa tiene tres objetivos: identificar componentes de la visión y requisitos, identificar los límites del alcance y reconocer las preocupaciones y factores culturales que darán forma a la comunicación de la arquitectura.
+
+*   **Director de Servicio al Cliente (Stakeholder principal):** 
+    *   *Preocupación:* Tiempos de respuesta lentos y alta insatisfacción del cliente.
+    *   *Requisito:* Clasificación precisa de al menos el 85% de las PQRS sin intervención humana.
+*   **Gerente de TI (Stakeholder técnico):** 
+    *   *Preocupación:* Integración del modelo de IA con el CRM heredado (legacy) de la empresa.
+    *   *Requisito:* Arquitectura basada en microservicios y APIs RESTful.
+*   **Agentes de Soporte (Usuarios finales):** 
+    *   *Preocupación:* Miedo al reemplazo laboral y fatiga por reasignación manual.
+    *   *Requisito:* Interfaz clara donde la IA sugiera el área (Facturación, Soporte Técnico, Retención) y permita corrección manual si es necesario.
+
+### 3. Confirmar y Definir los Objetivos del Negocio, los Impulsores del Negocio y las Limitaciones
+Es necesario identificar los objetivos comerciales y los impulsores estratégicos de la organización, asegurando que las definiciones existentes estén actualizadas.
+*   **Objetivos del Negocio:** Reducir el tiempo promedio de primera respuesta a las PQRS en un 40% durante el primer trimestre de implementación.
+*   **Impulsores del Negocio (Drivers):** Alto volumen de solicitudes diarias (más de 10,000 PQRS) y penalizaciones regulatorias por incumplimiento en tiempos de respuesta.
+*   **Limitaciones (Constraints):** Se deben definir las limitaciones con las que se debe lidiar, incluyendo limitaciones de toda la empresa y específicas del proyecto. Estas incluyen un presupuesto estricto de $50,000 USD, un límite de tiempo de 3 meses para el MVP, y el cumplimiento obligatorio de la Ley de Protección de Datos Personales en la manipulación de los textos de las quejas.
+
+### 4. Evaluar las Capacidades del Negocio
+Este paso busca comprender el nivel de capacidad base y objetivo de la empresa. Es fundamental identificar las capacidades comerciales requeridas que la empresa debe poseer para actuar sobre las prioridades estratégicas.
+*   **Capacidad Base (Baseline):** Actualmente, la redirección de PQRS es 100% manual. Los agentes leen cada ticket y lo asignan en el CRM, tomando un promedio de 3 a 5 minutos por ticket.
+*   **Capacidad Objetivo (Target):** Capacidad de procesamiento de lenguaje natural (NLP) integrada en el CRM que pre-clasifica y enruta el ticket en milisegundos.
+*   **Brechas (Gaps):** La empresa carece de talento interno especializado en IA (brecha de habilidades) y de infraestructura de procesamiento en la nube nativa.
+
+### 5. Evaluar la Preparación para la Transformación del Negocio
+Se puede utilizar una Evaluación de Preparación para la Transformación del Negocio para evaluar y cuantificar la preparación de la organización para someterse a un cambio. 
+*   **Factores de preparación:** 
+    *   *TI:* Preparación media (el CRM tiene APIs, pero la infraestructura es On-Premise).
+    *   *Cultura Organizacional:* Preparación baja/media. Hay resistencia al cambio por parte del nivel operativo ante la automatización. 
+*   Estos resultados se utilizan para dar forma al alcance de la arquitectura e identificar áreas de riesgo.
+
+### 6. Definir el Alcance
+Se debe definir qué está dentro y qué está fuera del alcance de los esfuerzos de la Arquitectura Base y la Arquitectura Objetivo.
+*   **Dentro del alcance (In-scope):** Desarrollo del modelo de IA (clasificación de texto), creación del microservicio de inferencia, e integración con el módulo de enrutamiento del CRM actual.
+*   **Fuera del alcance (Out-of-scope):** La resolución automática o respuesta automatizada (Chatbot) hacia el cliente final; el alcance se limita solo al enrutamiento al área responsable.
+*   **Dominios de arquitectura a cubrir:** Negocio, Datos (datasets de entrenamiento de PQRS), Aplicación (APIs e integración CRM) y Tecnología (Infraestructura Cloud).
+
+### 7. Confirmar y Definir los Principios de la Arquitectura, incluyendo los Principios del Negocio
+Los principios de arquitectura se basan normalmente en los desarrollados en la Fase Preliminar de TOGAF.
+*   **Principio de Negocio 1:** El cliente es el centro de la operación (Priorizar el enrutamiento ágil para mejorar la experiencia del cliente).
+*   **Principio de Arquitectura (Datos):** Los datos son un activo (Los históricos de PQRS deben estar limpios, clasificados y gobernados para entrenar modelos efectivos).
+*   **Principio de Arquitectura (Aplicación):** Independencia tecnológica (El modelo de IA debe estar desacoplado del CRM para permitir escalabilidad futura).
+
+### 8. Desarrollar la Visión de la Arquitectura
+Basándose en las preocupaciones de las partes interesadas, los requisitos, el alcance y los principios, se crea una vista de alto nivel de las arquitecturas base y objetivo. 
+*   **Escenario de Negocio:** Un cliente envía una queja extensa sobre una caída de internet y un cobro injustificado. En la *Arquitectura Base*, el ticket espera en una cola general por 24 horas hasta que un agente humano lo lee y lo envía a Soporte Técnico (y luego a Facturación). En la *Arquitectura Objetivo*, el modelo de IA extrae la intención y las entidades del texto, dividiendo el ticket y notificando en tiempo real a las áreas de Facturación y Soporte Técnico simultáneamente.
+*   Estas definiciones iniciales de la arquitectura deben almacenarse en el Repositorio de Arquitectura.
+
+### 9. Definir las propuestas de valor de la arquitectura objetivo y los KPI
+Es fundamental desarrollar el caso de negocio, definir las propuestas de valor para los grupos de partes interesadas y establecer métricas de rendimiento.
+*   **Propuesta de Valor:** Transformar el centro de contacto de un cuello de botella reactivo a un despachador inteligente y automatizado, reduciendo costos operativos y mitigando el riesgo de multas regulatorias.
+*   **KPIs (Indicadores Clave de Rendimiento):**
+    *   *Accuracy del Modelo:* > 88% de precisión en la clasificación del área responsable.
+    *   *Reducción de Tiempo:* Disminución del 90% en el tiempo de triage (clasificación inicial) de PQRS.
+    *   *Retorno de Inversión (ROI):* Recuperación de la inversión en 8 meses mediante la optimización de horas-hombre.
+
+### 10. Identificar los riesgos de la transformación empresarial y las actividades de mitigación
+Se deben identificar los riesgos asociados con la Visión de la Arquitectura y evaluar su nivel inicial y su estrategia de mitigación. Se consideran dos niveles de riesgo: Nivel de Riesgo Inicial y Nivel de Riesgo Residual.
+*   **Riesgo 1:** Clasificación errónea por parte del modelo IA (Falsos Positivos) que retrase más el ticket (Riesgo Inicial: Crítico).
+    *   *Mitigación:* Implementar un umbral de confianza (confidence score). Si la IA tiene menos del 75% de seguridad en la predicción, el ticket se envía a la cola manual. (Riesgo Residual: Marginal).
+*   **Riesgo 2:** Sesgo en los datos de entrenamiento históricos que provoque mala atención a ciertas demografías (Riesgo Inicial: Marginal).
+    *   *Mitigación:* Auditoría y balanceo del dataset antes de la fase de entrenamiento. (Riesgo Residual: Insignificante).
+
+### 11. Desarrollar la Declaración de Trabajo de Arquitectura y plantear su aprobación
+Se evaluarán los productos de trabajo requeridos contra los requisitos de rendimiento comercial y se estimarán los recursos necesarios para desarrollar la hoja de ruta.
+*   **Documento de Aprobación:** Se elabora formalmente la Declaración de Trabajo de Arquitectura, que incluirá la visión general, el plan del proyecto, los roles de los científicos de datos, ingenieros de datos y arquitectos de TI.
+*   **Comunicaciones:** Se desarrolla el Plan de Comunicaciones de Arquitectura Empresarial para interactuar con las partes interesadas sobre el progreso del proyecto.
+*   **Aprobación:** Se revisan los planes con los patrocinadores (Director de Servicio al Cliente y Gerente de TI) para asegurar la aprobación formal bajo los procedimientos de gobernanza adecuados y obtener la firma (sign-off) para proceder a la Fase B (Arquitectura de Negocio).
+
