@@ -60,13 +60,13 @@ Actualmente la gestión de PQRS en TelcoLatam es 100% manual: un agente lee cada
 
 Vista simplificada del flujo de extremo a extremo, tal como está documentada en el Procedimiento PQRSD:
 
-![Flujo del proceso PQRSD, línea base, vista simplificada](images/fase_b_linea_base_flujo.jpg)
+![Flujo del proceso PQRSD, línea base, vista simplificada](../images/fase_b_linea_base_flujo.jpg)
 
 *Figura 1. Flujo del proceso PQRSD (línea base) — vista simplificada.*
 
 Vista del mismo proceso organizada por carriles de actor, que respalda el catálogo de la sección 2.2:
 
-![Flujo del proceso PQRSD, línea base, vista por actor](images/fase_b_linea_base_actores.jpg)
+![Flujo del proceso PQRSD, línea base, vista por actor](../images/fase_b_linea_base_actores.jpg)
 
 *Figura 2. Flujo del proceso PQRSD (línea base) — vista por actor (swimlane).*
 
@@ -132,7 +132,7 @@ Para mitigar el riesgo de clasificación errónea (riesgo crítico identificado 
 
 ### 3.5 Diagrama de Proceso de Negocio – Objetivo
 
-![Flujo del proceso PQRS con clasificación en 3 niveles](images/fase_b_objetivo_3_niveles.png)
+![Flujo del proceso PQRS con clasificación en 3 niveles](../images/fase_b_objetivo_3_niveles.png)
 
 *Figura 3. Flujo del proceso PQRS con clasificación en 3 niveles (arquitectura objetivo). Verde: reglas sin IA; azul: IA.*
 
