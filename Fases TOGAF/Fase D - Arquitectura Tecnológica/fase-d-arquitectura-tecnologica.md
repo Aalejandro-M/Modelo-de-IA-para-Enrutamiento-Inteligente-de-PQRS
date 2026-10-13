@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Fase A: Visión de la Arquitectura (TOGAF)
+=======
+# Fase A: Visión de la Arquitectura
+>>>>>>> eb02bd17fdf6daf02307e812236b1804d4f77da7
 ## Proyecto: Modelo de IA para Enrutamiento Inteligente de PQRS
 **Empresa de Referencia:** TelcoLatam (Empresa de Telecomunicaciones)
 
